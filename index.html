@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Bitcoinology Terminal Blueprint</title>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'base',
+      themeVariables: {
+        background: '#0b1020',
+        primaryColor: '#121a30',
+        primaryTextColor: '#e8eefc',
+        primaryBorderColor: '#24314f',
+        lineColor: '#6ea8fe',
+        fontFamily: 'Inter, system-ui, sans-serif'
+      }
+    });
+  </script>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --surface: #121a30;
+      --border: #24314f;
+      --text: #e8eefc;
+      --muted: #9fb0d1;
+      --accent: #6ea8fe;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom) 0;
+    }
+    .wrap {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .sub {
+      margin: 8px 0 16px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px;
+      overflow-x: auto;
+    }
+    .pill {
+      display: inline-block;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 12px;
+      border-radius: 999px;
+      padding: 4px 10px;
+      margin-bottom: 10px;
+    }
+    @media (min-width: 768px) {
+      .wrap { padding: 24px; }
+      h1 { font-size: 30px; }
+      .sub { font-size: 15px; }
+      .card { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="pill">mobile-first v0</div>
+    <h1>Bitcoinology Terminal — First User Flow</h1>
+    <p class="sub">Top-to-bottom architecture flow for terminal-first onboarding, search, and agentic execution.</p>
+
+    <section class="card">
+      <div class="mermaid">
+flowchart TD
+  A[Install CLI] --> B[Paste API Key]
+  B --> C[Authenticate Locally]
+  C --> D[Ask Question in Terminal]
+  D --> E[Oracle routes intent]
+  E --> F[Jackal retrieves evidence]
+  F --> G{Need deeper analysis?}
+  G -->|Yes| H[Playbook synthesis]
+  G -->|No| I[Gate validation]
+  H --> I
+  I --> J[Answer + citations in terminal]
+  J --> K[Save as local files]
+  K --> L[Open dashboards + ontology via agent]
+      </div>
+    </section>
+  </main>
+</body>
+</html>
